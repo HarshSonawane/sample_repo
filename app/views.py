@@ -3,4 +3,5 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("Hello World New Commit!")
+    q = request.GET.get('q')
+    return HttpResponse("Hello World! " + q)
